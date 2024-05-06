@@ -46,11 +46,15 @@ export class CurrentData extends WeatherData {
 export class ForeCastData extends WeatherData {
   constructor(location, days) {
     super(URLKeys.foreCastUrl(location, days));
+    this.location = location;
   }
   async forecastData() {
     const data = await this.getData();
     const forecast = data.forecast;
     return forecast;
+  }
+  getCurrentLocation() {
+    return this.location;
   }
 }
 
