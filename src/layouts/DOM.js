@@ -248,15 +248,6 @@ function weatherInfoTable(current, feelslike, isForeCast) {
   return table;
 }
 
-function createAccordianButton() {
-  const div = new HTMLElementBuilder("div")
-    .setClass("p-3 flex justify-center")
-    .build();
-  div.innerHTML = `<button class="bg-blue-500 p-2 rounded-lg text-slate-50 hover:bg-slate-50 hover:text-blue-600  active:translate-x-1 translate-y-1 hover:ring-1">Show AQI Table</button>
-`;
-  return div;
-}
-
 function createAqiContainer(airquality) {
   const div = new HTMLElementBuilder("div")
     .setId("aqi-container")
